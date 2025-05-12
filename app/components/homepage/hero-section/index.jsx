@@ -21,7 +21,7 @@ function HeroSection() {
       <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-4">
         <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem] text-center mb-12">
           Hello, <br />
-          I'm {' '}
+          I&apos;m {' '}
           <span className="text-pink-500">{personalData.name}</span>
           {` , a passionate `}
           <span className="text-[#16f2b3]">Computer Science Student</span>
