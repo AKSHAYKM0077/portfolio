@@ -1,4 +1,3 @@
-import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,9 +9,22 @@ import "./css/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio of Akshay Mehta - Software Developer",
-  description:
-    "This is the portfolio of Akshay Mehta. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
+  title: "Akshay Mehta - Software Developer",
+  description: "Portfolio website of Akshay Mehta, a Computer Science student and Software Developer. Showcasing projects, skills, and experience in web development and competitive programming.",
+  metadataBase: new URL('https://akshay-mehta.dev'),
+  openGraph: {
+    title: 'Akshay Mehta - Software Developer',
+    description: 'Portfolio website of Akshay Mehta, a Computer Science student and Software Developer.',
+    url: 'https://akshay-mehta.dev',
+    siteName: 'Akshay Mehta Portfolio',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Akshay Mehta - Software Developer',
+    description: 'Portfolio website of Akshay Mehta, a Computer Science student and Software Developer.',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -27,7 +39,6 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
     </html>
   );
 }
