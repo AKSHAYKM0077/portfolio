@@ -34,10 +34,10 @@
     "sass": "^1.71.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
-    "vercel": "latest"
+    "vercel": "^41.7.4"
   },
   "engines": {
-    "node": "18.17.0"
+    "node": ">=18.17.0"
   },
   "resolutions": {
     "glob": "^9.0.0",
