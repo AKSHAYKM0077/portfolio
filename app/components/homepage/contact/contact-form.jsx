@@ -45,7 +45,7 @@ function ContactForm() {
         from_email: userInput.email,
         message: userInput.message,
         to_name: "Akshay",
-        to_email: "akshaymehta0077@gmail.com",
+        to_email: process.env.NEXT_PUBLIC_EMAIL,
       };
 
       await emailjs.send(

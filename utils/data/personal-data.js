@@ -3,7 +3,7 @@ export const personalData = {
   profile: '/profile.jpg',
   designation: "Software Developer",
   description: "I'm a Computer Science and Engineering student at Nirma University, Ahmedabad (Batch of 2026), passionate about problem-solving and web development. A quick learner with a self-driven attitude, I love exploring new technologies and building real-world applications. I enjoy working on development projects in my free time and have experience in competitive programming. I'm always eager to learn more, collaborate on new ideas, and grow as a developer.",
-  email: 'akshaymehta0077@gmail.com',
+  // email: process.env.NEXT_PUBLIC_EMAIL, // Use environment variable for email
   phone: '',
   github: 'https://github.com/akshaymehta0077',
   facebook: '',

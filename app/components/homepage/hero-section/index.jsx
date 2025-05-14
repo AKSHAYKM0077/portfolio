@@ -60,7 +60,7 @@ function HeroSection() {
             <SiLeetcode size={30} />
           </Link>
           <Link
-            href={`mailto:${personalData.email}`}
+            href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
             target='_blank'
             className="transition-all text-pink-500 hover:scale-125 duration-300"
           >
