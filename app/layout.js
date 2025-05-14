@@ -12,6 +12,11 @@ export const metadata = {
   title: "Akshay Mehta - Software Developer",
   description: "Portfolio website of Akshay Mehta, a Computer Science student and Software Developer. Showcasing projects, skills, and experience in web development and competitive programming.",
   metadataBase: new URL('https://akshay-mehta.dev'),
+  icons: {
+    icon: '/profile.jpg',
+    shortcut: '/profile.jpg',
+    apple: '/profile.jpg',
+  },
   openGraph: {
     title: 'Akshay Mehta - Software Developer',
     description: 'Portfolio website of Akshay Mehta, a Computer Science student and Software Developer.',
@@ -19,11 +24,20 @@ export const metadata = {
     siteName: 'Akshay Mehta Portfolio',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/profile.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Akshay Mehta',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Akshay Mehta - Software Developer',
     description: 'Portfolio website of Akshay Mehta, a Computer Science student and Software Developer.',
+    images: ['/profile.jpg'],
   },
 };
 
