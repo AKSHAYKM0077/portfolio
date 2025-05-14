@@ -1,11 +1,17 @@
 "use client"
 
 import { useEffect } from 'react';
+import { querySelector, querySelectorAll, addEventListener, removeEventListener, getDocument } from '@/utils/browser';
 
-const GlowCard = ({ children , identifier}) => {
+const GlowCard = ({ children, identifier }) => {
   useEffect(() => {
-    const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
-    const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
+    if (typeof window === 'undefined') return;
+
+    const CONTAINER = querySelector(`.glow-container-${identifier}`);
+    const CARDS = querySelectorAll(`.glow-card-${identifier}`);
+    const doc = getDocument();
+
+    if (!CONTAINER || !CARDS.length || !doc) return;
 
     const CONFIG = {
       proximity: 40,
@@ -47,7 +53,7 @@ const GlowCard = ({ children , identifier}) => {
       }
     };
 
-    document.body.addEventListener('pointermove', UPDATE);
+    addEventListener(doc.body, 'pointermove', UPDATE);
 
     const RESTYLE = () => {
       CONTAINER.style.setProperty('--gap', CONFIG.gap);
@@ -64,7 +70,7 @@ const GlowCard = ({ children , identifier}) => {
 
     // Cleanup event listener
     return () => {
-      document.body.removeEventListener('pointermove', UPDATE);
+      removeEventListener(doc.body, 'pointermove', UPDATE);
     };
   }, [identifier]);
 
