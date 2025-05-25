@@ -59,8 +59,16 @@ function HeroSection() {
           >
             <SiLeetcode size={30} />
           </Link>
-          <Link
+          {/* Temporarily commented out email link using environment variable */}
+          {/* <Link
             href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+            target='_blank'
+            className="transition-all text-pink-500 hover:scale-125 duration-300"
+          >
+            <MdEmail size={30} />
+          </Link> */}
+          <Link
+            href="mailto:your-email@example.com"
             target='_blank'
             className="transition-all text-pink-500 hover:scale-125 duration-300"
           >

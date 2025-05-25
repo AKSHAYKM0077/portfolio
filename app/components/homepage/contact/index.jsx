@@ -52,7 +52,14 @@ function ContactSection() {
                 size={48}
               />
             </Link>
-            <Link target="_blank" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+            {/* Temporarily commented out email link using environment variable */}
+            {/* <Link target="_blank" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+              <MdEmail
+                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+                size={48}
+              />
+            </Link> */}
+            <Link target="_blank" href="mailto:your-email@example.com">
               <MdEmail
                 className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={48}
