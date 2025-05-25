@@ -45,7 +45,7 @@ function ContactForm() {
         from_email: userInput.email,
         message: userInput.message,
         to_name: "Akshay",
-        to_email: "your-email@example.com", // Temporary replacement
+        to_email: process.env.NEXT_PUBLIC_EMAIL,
       };
 
       await emailjs.send(
